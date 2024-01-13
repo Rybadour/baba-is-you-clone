@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmhw31efo01hv"]
+
+[ext_resource type="Texture2D" uid="uid://cr11o7ywwnytv" path="res://butterfly.png" id="1_6xs3g"]
+[ext_resource type="Texture2D" uid="uid://dt7utmbw84ox2" path="res://Player_Saoirse32x32.png" id="2_5ab1i"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58q3a"]
+texture = ExtResource("1_6xs3g")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wxj6"]
+texture = ExtResource("2_5ab1i")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_q6iql"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_58q3a")
+sources/1 = SubResource("TileSetAtlasSource_4wxj6")
+
+[node name="Node2d" type="Node2D"]
+texture_filter = 2
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_q6iql")
+cell_quadrant_size = 32
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 1, 0)
